@@ -1,7 +1,7 @@
-from django.urls import path
-from blog import views
-  # ✅ CORRECT: import from the same folder
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),  # ✅ Routes the root URL to your view
+    path('admin/', admin.site.urls),
+    path('', include('blog.urls')),
 ]

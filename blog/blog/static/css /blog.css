@@ -1,0 +1,25 @@
+body {
+    padding-left: 15px;
+}
+
+h1, h2 {
+    font-family: Georgia, serif;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #388E3C;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9em;
+}
