@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
   <h1>{{ post.title }}</h1>
-  <p>{{ post.published_date }}</p>
-  <div>{{ post.text|linebreaks }}</div>
+  <p class="meta">{{ post.published_date }} · by {{ post.author.username }}</p>
+  <div class="post-body">
+    {{ post.text|linebreaks }}
+  </div>
+
+  <h3>Comments</h3>
+  {% for comment in post.comments.all %}
+    <div class="comment">
+      <p><strong>{{ comment.author }}:</strong> {{ comment.text }}</p>
+    </div>
+  {% empty %}
+    <p>No comments yet.</p>
+  {% endfor %}
 {% endblock %}

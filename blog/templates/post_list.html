@@ -4,7 +4,10 @@
   {% for post in posts %}
     <div class="post">
       <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-      <p>{{ post.published_date }}</p>
+      <p class="meta">
+        {{ post.published_date }} ·
+        {{ post.comments.count }} comment{{ post.comments.count|pluralize }}
+      </p>
       <p>{{ post.text|slice:":200" }}…</p>
     </div>
   {% empty %}
