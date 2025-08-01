@@ -34,3 +34,4 @@ TIME_ZONE='UTC'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'blog','static')]
 LOGIN_REDIRECT_URL = '/'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
