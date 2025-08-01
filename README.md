@@ -11,8 +11,9 @@ users to create posts and now supports adding comments to each post.
    source venv/bin/activate
    pip install django
    ```
-2. Apply migrations and start the development server:
+2. Run a sanity check and apply migrations:
    ```bash
+   python manage.py check
    python manage.py migrate
    python manage.py runserver
    ```
